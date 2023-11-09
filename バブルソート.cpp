@@ -49,14 +49,6 @@ int main()
 
 	int* array = new int[arraysize];
 
-	if (array == NULL)
-	{
-		*array = 0;
-
-		cout << *array << endl;
-		delete[] array;
-	}
-
 	InitRand();
 	InitRand(array, arraysize);
 
@@ -70,5 +62,13 @@ int main()
 	Show(array, arraysize);	
 	cout << endl;
 
-	delete[] array;
+	if (array != NULL)
+	{
+		for (int i = 0; i < arraysize; ++i)
+		{
+			*(array + i) = 0;
+			cout << *(array + i) << flush;
+		}
+		delete[] array;
+	}
 }
