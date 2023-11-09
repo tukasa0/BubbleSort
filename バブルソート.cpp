@@ -69,4 +69,6 @@ int main()
 	cout << "バブルソートをした後 " << flush;
 	Show(array, arraysize);	
 	cout << endl;
+
+	delete[] array;
 }
