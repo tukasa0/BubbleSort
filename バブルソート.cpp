@@ -26,10 +26,10 @@ void Show(const int* const array, const int const arraysize)
 
 void BubbleSort(int* array, int arraysize)
 {
-	for (int i = 0; i < arraysize; ++i)
+	for (int i = arraysize; i > 0; --i)
 	{
 		int keep = 0;
-		for (int j = arraysize - 1; 0 < j; --j)
+		for (int j = 1; j < i; ++j)
 		{
 			if (*(array + j) < *(array + j - 1))
 			{
